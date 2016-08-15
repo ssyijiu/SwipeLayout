@@ -9,6 +9,7 @@
 
 ##效果展示
 
+![](./show.gif)
 ##使用说明
 
 ###布局
@@ -28,6 +29,52 @@
 </com.ssyijiu.swipelayout.SwipeLayout>
 ```
 
+###代码
+
+```
+// 在进入Activity或者Fragment时候初始化SwipeLayout
+SwipeLayoutManager.getInstance().closeOpenInstance();
+
+// 设置点击事件
+swipelayou.setOnSwipeLayoutClickListener(new SwipeLayout.OnSwipeLayoutClickListener() {
+    @Override
+    public void onClick() {
+        Toast.makeText(MainActivity.this, "BUTTON", Toast.LENGTH_SHORT).show();
+    }
+});
+
+// 获取内容区域并设置点击事件
+swipelayou.getContentView().setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(MainActivity.this, "BUTTON", Toast.LENGTH_SHORT).show();
+    }
+});
+
+// 获取删除区域并设置点击事件（因为这里删除区域是LinearLayout，包括一个callView和deleteView，需要自己获取子View来设置点击事件）
+((LinearLayout)swipelayou.getDeleteView()).getChildAt(1).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(MainActivity.this, "DELETE", Toast.LENGTH_SHORT).show();
+    }
+});
+
+// ListView侧滑打开的时候，通过监听滑动来关闭打开的侧滑。
+// 这里没有想到其他的办法，如果您有思路，希望告知我。
+listview.setOnScrollListener(new AbsListView.OnScrollListener() {
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
+        if(scrollState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
+            // 如果listView跟随手机拖动，关闭已经打开的SwipeLayout
+            SwipeLayoutManager.getInstance().closeOpenInstance();
+        }
+    }
+
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+    }
+});
+```
 ## 联系作者
 - Github: [ssyijiu](https://github.com/ssyijiu)
 - E-mail: lxmyijiu@163.com
