@@ -1,8 +1,7 @@
 #SwipeLayout
 侧滑删除，适用于任何View。
 
-> Github上有一个非常著名的侧滑删除[daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)，但是我在使用的时候发现了一些BUG。
-
+> Github上有一个非常著名的侧滑删除[daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)，但是我在使用的时候发现了一些BUG。   
 > 其他的侧滑删除大都又是与ListView、RecyclerView耦合在一起，不适用于目前的项目，于是有了这个小巧简洁的SwipeLayout。
 
 ##项目原理
