@@ -9,10 +9,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 /**
- * Created by lxm on 2016/4/15.
+ * Created by ssyijiu on 2016/8/16.
+ * Github: ssyijiu
+ * E-mail: lxmyijiu@163.com
  */
 public class SwipeLayout extends FrameLayout {
 
@@ -187,10 +188,8 @@ public class SwipeLayout extends FrameLayout {
 
             int width = contentWidth - dragWidth/2;
             if(contentView.getRight() < width) {
-                Toast.makeText(SwipeLayout.this.getContext(), "openDeleteMenu", Toast.LENGTH_SHORT).show();
                 openDeleteMenu();
             } else {
-                Toast.makeText(SwipeLayout.this.getContext(), "closeDeleteMenu", Toast.LENGTH_SHORT).show();
                 closeDeleteMenu();
             }
         }
@@ -269,8 +268,7 @@ public class SwipeLayout extends FrameLayout {
      * @return
      */
     public static float getDistanceBetween2Points(PointF p0, PointF p1) {
-        float distance = (float) Math.sqrt(Math.pow(p0.y - p1.y, 2) + Math.pow(p0.x - p1.x, 2));
-        return distance;
+        return (float) Math.sqrt(Math.pow(p0.y - p1.y, 2) + Math.pow(p0.x - p1.x, 2));
     }
 }
 

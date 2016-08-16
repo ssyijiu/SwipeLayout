@@ -2,7 +2,9 @@ package com.ssyijiu.swipelayout;
 
 /**
  * 使用单例模式来管理listView条目的打开与关闭
- * Created by lxm on 2016/4/15.
+ * Created by ssyijiu on 2016/8/16.
+ * Github: ssyijiu
+ * E-mail: lxmyijiu@163.com
  */
 public class SwipeLayoutManager {
 

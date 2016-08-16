@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listview;
     private Adapter adapter;
 
-    private ArrayList<String> datas = new ArrayList<String>();
+    private ArrayList<String> datas = new ArrayList<>();
 
 
 
@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        // 初始化SwipeLayout
         listview = (ListView) findViewById(R.id.listview);
         swipelayout_button = (SwipeLayout) findViewById(R.id.swipelayout_button);
+        // 初始化SwipeLayout
         SwipeLayoutManager.getInstance().closeOpenInstance();
     }
 
