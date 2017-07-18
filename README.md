@@ -1,18 +1,18 @@
-#SwipeLayout
-侧滑删除，适用于任何View。
+# SwipeLayout
+侧滑删除，适用于任何 View。
 
-> Github上有一个非常著名的侧滑删除[daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)，但是我在使用的时候发现了一些BUG。   
-> 其他的侧滑删除大都又是与ListView、RecyclerView耦合在一起，不适用于目前的项目，于是有了这个小巧简洁的SwipeLayout。
+> Github 上有一个非常著名的侧滑删除 [daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)，但是我在使用的时候发现了一些 BUG。   
+> 其他的侧滑删除大都又是与 ListView、RecyclerView 耦合在一起，不适用于目前的项目，于是有了这个小巧简洁的 SwipeLayout。
 
-##项目原理
-使用ViewDragHelper和ViewDragHelper.Callback完成一系列的侧滑动作。
+## 项目原理
+使用 ViewDragHelper 和 ViewDragHelper.Callback 完成一系列的侧滑动作。
 
-##效果展示
+## 效果展示
 
 ![](./show.gif)
-##使用说明
+## 使用说明
 
-###布局
+### 布局
 布局分内容区域和删除区域，内容区域为正常展示数据的区域，删除区域是侧滑出来的区域。
 ```html
 <com.ssyijiu.swipelayout.SwipeLayout
@@ -29,10 +29,10 @@
 </com.ssyijiu.swipelayout.SwipeLayout>
 ```
 
-###代码
+### 代码
 
 ```
-// 在进入Activity或者Fragment时候初始化SwipeLayout
+// 在进入 Activity 或者 Fragmen t时候初始化 SwipeLayout
 SwipeLayoutManager.getInstance().closeOpenInstance();
 
 // 设置点击事件
@@ -80,7 +80,7 @@ listview.setOnScrollListener(new AbsListView.OnScrollListener() {
 - E-mail: lxmyijiu@163.com
 - WeChat: ssyijiu11
 
-##License
+## License
 
 ```
 Copyright 2016 ssyijiu
