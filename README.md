@@ -1,3 +1,5 @@
+# @Deprecate
+年久失修，请使用：https://github.com/mcxtzhang/SwipeDelMenuLayout
 # SwipeLayout
 侧滑删除，适用于任何 View。
 
